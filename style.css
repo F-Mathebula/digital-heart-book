@@ -13,6 +13,23 @@ body {
   min-height: 100vh;
 }
 
+.menu {
+  background-image: url('images/akame3.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.hero-section {
+  color: red;
+  background-color: rgba(255, 255, 255, 0.219);
+  border: 2px solid red;
+  width: 50%;
+  margin: 45px 20px;
+  text-align: center;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -23,11 +40,9 @@ body {
   top: 0;
   background: transparent;
   box-shadow: 0 5px 10px #333;
-  backdrop-filter: blur(10px);
   z-index: 999;
-  background-color: #b5deff;
+  background-color: rgba(255, 2555, 255, 0.5);
   border-radius: 30px;
-  margin: 1rem auto;
 }
 
 .navbar-container {
@@ -59,7 +74,7 @@ body {
 
 .heartbook {
   font-weight: bold;
-  background: linear-gradient(to right, #cc792c 0%, #ffbd7f 100%);
+  background: linear-gradient(to right, #b81d1d 0%, #ff5858 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -77,7 +92,7 @@ body {
 
 .navbar-link {
   text-decoration: none;
-  color: #cc792c;
+  color: #b81d1d;
   font-size: 1.1rem;
   font-weight: 530;
   padding: 3px 10px;
@@ -90,7 +105,7 @@ body {
 .navbar-link:hover {
   color: #333;
   background: rgba(188, 212, 229, 0.8);
-  border: 2px dashed #cc792c;
+  border: 2px dashed #b81d1d;
   padding-top: 2px;
 }
 
@@ -107,7 +122,7 @@ body {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background: #cc792c;
+  background: #b81d1d;
   transition: all 0.3s ease-in-out;
 }
 
@@ -135,7 +150,7 @@ body {
     right: 0;
     padding: 5rem 1rem;
     box-shadow: 0 10px 10px black;
-    background-color: #b5deff;
+    background-color: rgba(255, 2555, 255, 0.5);
     border-radius: 30px 30px 0 30px;
   }
 
