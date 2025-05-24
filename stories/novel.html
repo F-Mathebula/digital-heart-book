@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Our Novel</title>
+    <link rel="stylesheet" href="stories.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Our Novel</h1>
+      <p>The beginning of something beautiful, just like us.</p>
+    </header>
+
+    <nav>
+      <a href="../index.html">Back Home</a>
+      <a href="stories.html">Short Stories</a>
+    </nav>
+
+    <section id="our-novel">
+      <h2>Chapter One – [Insert Title Here]</h2>
+      <p>
+        This story is inspired by our love — gentle, messy, sweet, and real.
+      </p>
+      <button class="read-more" onclick="toggle('chapter1')">
+        Read Chapter
+      </button>
+      <div id="chapter1" class="story-content">
+        <p>[Paste your 3297-word chapter here. You can use paragraph `</p>
+        <p>` tags throughout for readability.]</p>
+      </div>
+    </section>
+
+    <script>
+      function toggle(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+  </body>
+</html>
