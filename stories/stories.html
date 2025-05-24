@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Short Stories</title>
+    <link rel="stylesheet" href="stories.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Short Stories</h1>
+      <p>Quick little love notes and dreams just for you.</p>
+    </header>
+
+    <nav>
+      <a href="../index.html">Back Home</a>
+      <a href="novel.html">Our Novel</a>
+    </nav>
+
+    <section id="short-stories">
+      <h2>Short Stories</h2>
+
+      <div class="story-card">
+        <h3>The Way You Laugh</h3>
+        <p>A moment that made me fall harder for you...</p>
+        <button class="read-more" onclick="toggle('story1')">Read More</button>
+        <div id="story1" class="story-content">
+          <p>
+            I remember the way you laughed that night we watched our favorite
+            show. It wasn’t just funny—it was the joy in your voice, the light
+            in your eyes. I think I fell in love with that sound.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <h3>Our Future Coffee Shop</h3>
+        <p>Just a tiny dream I keep having...</p>
+        <button class="read-more" onclick="toggle('story2')">Read More</button>
+        <div id="story2" class="story-content">
+          <p>
+            It’s rainy. We’re in our little corner café, your laptop’s open and
+            I’m sketching napkin doodles. You sip your coffee, I steal a bite of
+            your croissant. That’s it—that’s the dream.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggle(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+  </body>
+</html>
