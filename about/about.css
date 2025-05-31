@@ -120,3 +120,36 @@ p {
   color: #666;
   text-align: center;
 }
+
+.download-button {
+  display: flex;
+  padding: 7px 15px;
+  margin-top: 10px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  justify-content: center;
+  align-items: center;
+  background-image: url('akame2.1.jpg');
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;*/
+}
+
+.download-button:hover {
+  background-color: #e63950;
+}
+
+.image {
+  text-align: center;
+  margin: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
