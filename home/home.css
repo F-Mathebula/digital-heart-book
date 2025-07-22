@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #cff1ff;
+  color: white;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  /* background-image: url('../images/akame3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;*/
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  /*color: #e63946;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 50%;
+  margin: 45px 20px;
+  text-align: center;
+  padding: 1rem 1.5rem;*/
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.267);
+  z-index: 2;
+}
+
+/*.whatsapp-button {
+  padding: 5px 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.7rem;
+}*/
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  padding: 0 20px;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #970000; /* red-600 */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #970000; /* red-600 */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .hero-text p span.text-in {
+  display: block;
+  animation: textIn 0.5s ease;
+}
+
+.hero-section .hero-text p span.text-out {
+  animation: textOut 0.5s ease;
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.hero-section .hero-text p span {
+  font-size: 1.5rem;
+  margin: 40px;
+  color: #003283; /* blue-500 */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/*.whatsapp-button i {
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+}*/
+
+.hero-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #3b0000;
+  transform: scale(1.05);
+}
+
+.hero-button i {
+  font-size: 1.2rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 1;
+  transition: transform 0.8s ease, filter 0.6s ease;
+  filter: drop-shadow(0 0 15px #350000) drop-shadow(0 0 15px #1a588a);
+}
+
+.hero:hover .hero-bg {
+  transform: scale(1.03);
+  /* filter: drop-shadow(0 0 25px #850000) drop-shadow(0 0 40px #003385);*/
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  /*position: sticky;
+  top: 0;*/
+  background: transparent;
+  box-shadow: 0 5px 10px #333;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.329);
+  /*border-radius: 30px;*/
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-logo:hover {
+  padding-bottom: 2px;
+}
+
+.digital {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #f8f8f8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.heartbook {
+  font-weight: bold;
+  background: linear-gradient(to right, #b81d1d 0%, #ff5858 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #b81d1d;
+  font-size: 1.1rem;
+  font-weight: 530;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 2px dashed transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+
+.navbar-link:hover {
+  color: #333;
+  background: rgba(188, 212, 229, 0.8);
+  border: 2px dashed #b81d1d;
+  padding-top: 2px;
+}
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: #b81d1d;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid #444;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    font-size: 1rem;
+  }
+
+  /*.hero-button {
+    padding: 4px 5px;
+    font-size: 0.5rem;
+  }*/
+
+  .navbar {
+    backdrop-filter: none;
+  }
+
+  .digital {
+    font-size: 0.9rem;
+  }
+  .heartbook {
+    font-size: 1.5rem;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 160px;
+    top: 0;
+    right: 0;
+    padding: 5rem 1rem;
+    box-shadow: 0 10px 10px #00000083;
+    background-color: #000000b4;
+    border-radius: 30px 30px 0 30px;
+  }
+
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
