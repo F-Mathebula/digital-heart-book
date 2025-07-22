@@ -6,57 +6,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-  <body>
-    <div class="menu">
-      <nav class="navbar">
-        <div class="navbar-container">
-          <a href="index.html" class="navbar-logo">
-            <span class="digital">Digital</span>
-            <span class="heartbook">HeartBook</span>
-          </a>
-          <button class="navbar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
-          <ul class="navbar-menu">
-            <li><a href="stories/stories.html" class="navbar-link">Home</a></li>
-            <li><a href="about/about.html" class="navbar-link">About</a></li>
-            <li><a href="#" class="navbar-link">Videos</a></li>
-            <li><a href="#" class="navbar-link">Notes</a></li>
-            <li><a href="about/feet.html" class="navbar-link">Feet</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <div class="hero-section">
-        <h1>Happy Birthday, My Love 🎂❤️</h1>
-        <p>
-          Today is all about you — your smile, your soul, your heart. Even
-          though we’re miles apart, my love for you is right there with you. I
-          hope this little website brings a smile to your face and reminds you
-          how deeply you’re loved. Here's to more memories, laughter, and
-          everything beautiful we have yet to share.
-        </p>
-        <h3>I love you always.</h3>
-        <a
-          href="https://wa.me/+27787683762?text=I%20love%20you%20so%20forever%20from%20the%20bottom%20of%20my%20heart"
-          target="_blank"
-        >
-          <button class="whatsapp-button">
-            <i class="fab fa-whatsapp"></i> Message Me
-          </button>
-        </a>
+  <body class="theme-blue">
+    <div class="main">
+      <!-- Modal Trigger Button-->
+      <img id="themeGif" src="images/3.webp" class="floating-gif" />
+      <div class="buttons">
+        <button id="openModal" class="button">Welcome host</button>
+        <button id="toggleTheme" class="button">💙</button>
       </div>
-    </div>
-    <footer class="page-footer">
-      <p>Website created with love for your birthday 🎂 | By Tinka</p>
-    </footer>
+      <!-- Modal Structure -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle">To My Player 2 💙</h2>
+          <p id="modalMessage">
+            Every moment we spent together, even in pixels — means more to me
+            than you’ll ever know. I hope this small site makes you smile. I
+            made it with all my heart.
+            <br /><br />
+            🎂 Happy Birthday, my love 🎂
+          </p>
 
+          <div class="index">
+            <a
+              href="../home/home.html"
+              class="button fade-in"
+              style="animation-delay: 1s"
+              >Enter</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="float-heart">💙</div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
