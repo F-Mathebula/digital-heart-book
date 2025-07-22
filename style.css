@@ -1,82 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Courier New', monospace;
-  background-color: black;
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu {
-  background-image: url('images/akame3.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-section {
-  color: #e63946;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  width: 50%;
-  margin: 45px 20px;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(to bottom right, #a5d1ff, #023766);
+  color: #ffff;
   text-align: center;
-  padding: 1rem 1.5rem;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+  animation: fadeInBody 1.5s ease-in;
+}
+/* Modal Styling */
+.modal {
+  display: none;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.whatsapp-button {
-  padding: 5px 10px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 10px;
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #001f3f;
+  color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 20px #00bfff;
+  animation: fadeInModal 0.6s ease-out;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
 }
 
-.whatsapp-button i {
-  margin-right: 8px;
-  font-size: 18px;
-  vertical-align: middle;
+.close:hover {
+  color: #fff;
 }
 
-.navbar {
+h2,
+p {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+p {
+  color: #386b80;
+}
+
+.button {
+  background-color: #2a4563;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background: transparent;
-  box-shadow: 0 5px 10px #333;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.329);
-  border-radius: 30px;
 }
 
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 2rem;
-  max-width: 1500px;
-}
-
-.navbar-logo {
-  font-size: 2rem;
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
   text-decoration: none;
   cursor: pointer;
 }
@@ -93,124 +115,80 @@ body {
   cursor: pointer;
 }
 
-.heartbook {
-  font-weight: bold;
-  background: linear-gradient(to right, #b81d1d 0%, #ff5858 100%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  cursor: pointer;
+/*.theme-red {
+  background: linear-gradient(to bottom right, #8f1515e0, #000000);
+}*/
+.theme-red {
+  background-image: url('../images/y.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.theme-blue {
+  background-image: url('../images/wallhaven-1ppo83.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.navbar-menu {
-  display: flex;
-  text-align: center;
-  gap: 1.5rem;
-  list-style: none;
+.theme-red .button {
+  background-color: #8f1515e0;
+  color: white;
+}
+.theme-red .modal-content {
+  background-color: #000000;
+  box-shadow: 0 0 20px #000000;
 }
 
-.navbar-link {
-  text-decoration: none;
-  color: #b81d1d;
-  font-size: 1.1rem;
-  font-weight: 530;
-  padding: 3px 10px;
-  border-radius: 20px;
-  border: 2px dashed transparent;
-  transition: all 0.7s ease;
-  white-space: nowrap;
+.theme-red p {
+  color: #ffcccc;
 }
 
-.navbar-link:hover {
-  color: #333;
-  background: rgba(188, 212, 229, 0.8);
-  border: 2px dashed #b81d1d;
-  padding-top: 2px;
-}
-
-.navbar-toggle {
-  display: none;
-  background: transparent;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background: #b81d1d;
-  transition: all 0.3s ease-in-out;
-}
-
-.page-footer {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  text-align: center;
-  font-size: 0.9em;
-  border-top: 1px solid #444;
-  color: #aaa;
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    font-size: 1rem;
-  }
-
-  .whatsapp-button {
-    padding: 4px 5px;
-    font-size: 0.5rem;
-  }
-
-  .navbar {
-    backdrop-filter: none;
-  }
-
-  .digital {
-    font-size: 0.9rem;
-  }
-  .heartbook {
-    font-size: 1.5rem;
-  }
-
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.7rem !important;
-    position: absolute;
-    height: 100vh;
-    width: 160px;
-    top: 0;
-    right: 0;
-    padding: 5rem 1rem;
-    box-shadow: 0 10px 10px #00000083;
-    background-color: #000000b4;
-    border-radius: 30px 30px 0 30px;
-  }
-
-  .navbar-toggle {
-    display: block;
-    z-index: 999;
-  }
-
-  .navbar-menu.active {
-    display: flex;
-  }
-
-  .navbar-toggle.is-active .bar:nth-child(2) {
+@keyframes fadeInBody {
+  from {
     opacity: 0;
   }
-
-  .navbar-toggle.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  to {
+    opacity: 1;
   }
+}
 
-  .navbar-toggle.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+.button:hover {
+  background-color: #1a2b3c;
+  color: #ffffff;
+}
+
+.theme-red .button:hover {
+  background-color: #4d1313;
+  color: #ffffff;
+}
+
+#openModal {
+  transition: transform 0.3s ease;
+}
+
+#openModal:hover {
+  transform: scale(1.1);
+}
+
+.float-heart {
+  position: absolute;
+  animation: floatUp 4s infinite ease-in-out;
+  font-size: 30px;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
   }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.floating-gif {
+  width: 150px;
+  border-radius: 12px;
 }
