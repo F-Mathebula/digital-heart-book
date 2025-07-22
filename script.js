@@ -16,7 +16,7 @@ toggleButton.addEventListener('click', () => {
     modalTitle.innerHTML = 'To My Flame ❤️';
     modalMessage.innerHTML = `
       I know it's not much, but i hope you enjoy regardless.<br><br>
-      🔥 Happy Birthday, my love 🔥
+      Happy Birthday, my love 
     `;
 
     // Change GIF
