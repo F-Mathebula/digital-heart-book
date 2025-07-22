@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu">
+      <img src="../images/we.png" alt="Akame" class="hero-bg" />
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="navbar-logo">
+            <span class="digital">Digital</span>
+            <span class="heartbook">HeartBook</span>
+          </a>
+          <button class="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="navbar-menu">
+            <li>
+              <a href="../index.html" class="navbar-link">Welcome page</a>
+            </li>
+            <li>
+              <a href="../stories/stories.html" class="navbar-link">Stories</a>
+            </li>
+            <li><a href="../about/about.html" class="navbar-link">About</a></li>
+            <li><a href="#" class="navbar-link">Videos</a></li>
+            <li><a href="#" class="navbar-link">Notes</a></li>
+            <li><a href="../about/feet.html" class="navbar-link">Feet</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="hero-text">
+              <h1 class="hero-title">Happy Birthday, Love</h1>
+              <p class="animate-text">
+                <span>In the shadows, your light guides me.</span>
+                <span>My heart is yours, forever and always.</span>
+                <span>With you, every moment is a treasure.</span>
+                <span>In your eyes, I find my home.</span>
+                <span>With every heartbeat, I love you more.</span>
+                <span>In your smile, I see my future.</span>
+                <span>With you, I am complete.</span>
+                <span>In your laughter, I find my joy.</span>
+                <span>With you, I am never alone.</span>
+                <span>In your love, I find my purpose.</span>
+              </p>
+              <a
+                href="https://wa.me/+12014436543?text=Hi%20love%2C%20just%20dropping%20by%20your%20birthday%20site%20%F0%9F%92%97"
+                target="_blank"
+                class="hero-button"
+              >
+                <i class="fa-brands fa-whatsapp"></i> Hm
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <p>Website created with love for your birthday 🎂 | By Tinka</p>
+    </footer>
+
+    <script>
+      const navbarToggle = document.querySelector('.navbar-toggle');
+      const navbarMenu = document.querySelector('.navbar-menu');
+
+      navbarToggle.addEventListener('click', function () {
+        navbarToggle.classList.toggle('is-active');
+        navbarMenu.classList.toggle('active');
+      });
+
+      const txts = document.querySelector('.animate-text').children,
+        txtsLen = txts.length;
+      let index = 0;
+      const textInTimer = 3000,
+        textOutTimer = 3000;
+
+      function animateText() {
+        for (let i = 0; i < txtsLen; i++) {
+          txts[i].classList.remove('text-in', 'text-out');
+        }
+        txts[index].classList.add('text-in');
+
+        setTimeout(function () {
+          txts[index].classList.add('text-out');
+        }, textOutTimer);
+
+        setTimeout(function () {
+          if (index === txtsLen - 1) {
+            index = 0;
+          } else {
+            index++;
+          }
+          animateText();
+        }, textInTimer);
+      }
+      window.onload = animateText;
+    </script>
+  </body>
+</html>
