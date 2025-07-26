@@ -17,23 +17,12 @@ body {
 }
 
 .menu {
-  /* background-image: url('../images/akame3.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;*/
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .hero-section {
-  /*color: #e63946;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  width: 50%;
-  margin: 45px 20px;
-  text-align: center;
-  padding: 1rem 1.5rem;*/
   position: relative;
   height: 100vh;
   width: 100%;
@@ -60,16 +49,6 @@ body {
   background: rgba(0, 0, 0, 0.267);
   z-index: 2;
 }
-
-/*.whatsapp-button {
-  padding: 5px 10px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.7rem;
-}*/
 
 .hero-text {
   position: relative;
@@ -125,12 +104,6 @@ body {
   display: none;
 }
 
-/*.whatsapp-button i {
-  margin-right: 8px;
-  font-size: 18px;
-  vertical-align: middle;
-}*/
-
 .hero-button {
   display: inline-block;
   margin-top: 1rem;
@@ -168,7 +141,6 @@ body {
 
 .hero:hover .hero-bg {
   transform: scale(1.03);
-  /* filter: drop-shadow(0 0 25px #850000) drop-shadow(0 0 40px #003385);*/
 }
 
 .navbar {
@@ -177,13 +149,10 @@ body {
   align-items: center;
   height: 60px;
   width: 100%;
-  /*position: sticky;
-  top: 0;*/
   background: transparent;
   box-shadow: 0 5px 10px #333;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.329);
-  /*border-radius: 30px;*/
 }
 
 .navbar-container {
@@ -280,11 +249,6 @@ body {
   .hero-section {
     font-size: 1rem;
   }
-
-  /*.hero-button {
-    padding: 4px 5px;
-    font-size: 0.5rem;
-  }*/
 
   .navbar {
     backdrop-filter: none;
