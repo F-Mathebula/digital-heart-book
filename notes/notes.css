@@ -6,12 +6,16 @@ body {
   font-family: 'Courier New', monospace;
   background-color: #111;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .header {
@@ -72,6 +76,7 @@ body {
   background-color: #1a1a1a;
   transition: all 0.7s ease;
   white-space: nowrap;
+  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.1);
 }
 
 .note-link:hover {
@@ -100,5 +105,40 @@ body {
   color: #aaa;
 }
 
-@media (max-width: 600px) {
+.notes-section {
+  margin: 2rem 0;
+}
+
+.notes-grid {
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));*/
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.note {
+  background-color: #1a1a1a;
+  border: 2px dashed #b81d1d;
+  color: #333;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  /*transition: background-color 0.3s ease, transform 0.2s;*/
+  transition: background-color 0.3s ease, transform 0.2s, color 0.3s;
+  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.1);
+}
+
+.note:hover {
+  background-color: #778da9;
+  transform: translateY(-2px);
+}
+
+.note.revealed {
+  background-color: #c98888;
+  color: #333;
+  border: 2px dashed #333;
 }
